@@ -56,6 +56,27 @@ void setup() {
 
 
 void loop() {
+  setRight(50);
+  setLeft(150);
+  delay(3000);
+
+  setRight(150);
+  setLeft(50);
+  delay(3000);
+
+  setRight(0);
+  setLeft(150);
+  delay(3000);
+
+  setRight(150);
+  setLeft(0);
+  delay(3000);
+
+  setRight(-100);
+  setLeft(100);
+  delay(3000);
+
   setRight(100);
   setLeft(100);
+  delay(3000);
 }
