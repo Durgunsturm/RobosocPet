@@ -4,8 +4,15 @@
 #define SONAR_TRIG_RIGHT 2
 #define SONAR_ECHO_RIGHT 3
 
-unsigned long int echo_time;
-unsigned long int echo_start;
+#define LOOP_PERIOD 50
+
+unsigned long int echo_time, echo_start;
+
+unsigned int distanceLeft, distanceRight;
+
+unsigned long int pMillis;
+
+unsigned int sensor = 0;
 
 void setup() {
 
@@ -19,6 +26,8 @@ void setup() {
 
 
   Serial.begin(115200);
+
+  pMillis = millis();
   
 }
 
@@ -32,17 +41,19 @@ unsigned long int sonarGetDistance(int trig, int echo) {
 }
 
 void loop() {
+  if (millis() - pMillis > LOOP_PERIOD) {
+    pMillis = millis();
+    if (sensor == 0) {
+      int distanceLeft = sonarGetDistance(SONAR_TRIG_LEFT, SONAR_ECHO_LEFT);
+    } else if (sensor == 1) {
+      int distanceRight = sonarGetDistance(SONAR_TRIG_RIGHT, SONAR_ECHO_RIGHT);
+    } else {
+      sensor = 0;
 
-  delay(5);
-  int distanceLeft = sonarGetDistance(SONAR_TRIG_LEFT, SONAR_ECHO_LEFT);
-  delay(5);
-  int distanceRight = sonarGetDistance(SONAR_TRIG_RIGHT, SONAR_ECHO_RIGHT);
-
-  Serial.print(distanceLeft);
-  Serial.print("   ");
-  Serial.print(distanceRight);
-  Serial.print("   ");
-
-  Serial.println(70.0*((distanceLeft - distanceRight)/(distanceLeft + distanceRight)));
-
+      Serial.print("L: ")
+      Serial.print(distanceLeft);
+      Serial.print(", R: ");
+      Serial.print(distanceRight);
+      Serial.println();
+    }
 }
