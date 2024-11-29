@@ -1,4 +1,4 @@
-#include "motors.h"
+#include "lib.h"
 
 void set_motor_pwm(int fwd_pin, int rev_pin, int pwm_pin, int value) {
     if (!value) {
