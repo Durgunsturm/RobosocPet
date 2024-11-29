@@ -1,0 +1,11 @@
+Left sonar
+GND -> Ground breadboard (blue wires)
+Echo -> Pin 3
+Trig -> Pin 2
+Vcc -> Power breadboard
+
+Front sonar
+GND -> Ground breadboard    GREEN
+Echo -> Pin A0              Purple
+Trig -> Pin A1              White->Orange
+Vcc -> Power breadboard     White->Red
