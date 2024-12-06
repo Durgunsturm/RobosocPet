@@ -1,4 +1,5 @@
  
+ 
 #pragma once
 
 #define LEFT_PWM 11
@@ -11,6 +12,4 @@
 
 void set_motor_pwm(int fwd_pin, int rev_pin, int pwm_pin, char value, char reversed);
 void setLeft(int speed);
-void setRight(int speed);Test
-header
-file
+void setRight(int speed);

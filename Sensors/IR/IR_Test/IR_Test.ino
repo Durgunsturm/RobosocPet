@@ -6,7 +6,7 @@
 #define SONAR_TRIG_RIGHT 2
 #define SONAR_ECHO_RIGHT 3
 
-#define HIGH_SPEED 0
+#define HIGH_SPEED 1
 #define RANGE_MODE VL53L1X::Medium
 
 unsigned long int echo_time, echo_start;
@@ -41,7 +41,7 @@ void setup() {
   ir->setDistanceMode(RANGE_MODE);
   int budget = HIGH_SPEED ? 33000 : 140000;
   ir->setMeasurementTimingBudget(budget);
-  ir->startContinuous(250);
+  ir->startContinuous(50);
   Serial.println("...Init...");
   
 }
