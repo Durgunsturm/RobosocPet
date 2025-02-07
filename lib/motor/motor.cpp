@@ -4,19 +4,13 @@ void set_motor_pwm(int fwd_pin, int rev_pin, int pwm_pin, int value, char revers
     if (value == 0) {
     digitalWrite(fwd_pin, 0);
     digitalWrite(rev_pin, 0);
-    Serial.print("stopped ");
   } else if (reversed) {
     digitalWrite(fwd_pin, 0);
     digitalWrite(rev_pin, 1);
-    Serial.print("fwd ");
   } else {
     digitalWrite(fwd_pin, 1);
     digitalWrite(rev_pin, 0);
-    Serial.print("rev ");
   }
-  Serial.print((int)fmin(abs(value), 255));
-  Serial.print(" ");
-  Serial.println(value);
   analogWrite(pwm_pin, (char)fmin(abs(value), 255));
 }
 
