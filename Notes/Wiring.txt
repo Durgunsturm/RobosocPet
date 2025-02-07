@@ -1,0 +1,8 @@
+Motors:
+    (Circuit board pins to motor board looking from the front)
+ - RIGHT_PWM = Pin 9 -> ENA (Far left)
+ - RIGHT_REV = Pin 4 -> IN1 (Left)
+ - RIGHT_FWD = Pin 5 -> IN2 (Left middle)
+ - LEFT_FWD = Pin 8 -> IN3 (Right middle)
+ - LEFT_REV = Pin 7 -> IN4 (Right)
+ - LEFT_PWM = Pin 11 -> ENB (Far right)
