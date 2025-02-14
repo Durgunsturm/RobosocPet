@@ -1,3 +1,5 @@
+(OLD DOCUMENTATION)
+
 Left sonar
 GND -> Ground breadboard (blue wires)
 Echo -> Pin 3

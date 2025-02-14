@@ -1,8 +1,38 @@
 Motors:
     (Circuit board pins to motor board looking from the front)
- - RIGHT_PWM = Pin 9 -> ENA (Far left)
- - RIGHT_REV = Pin 4 -> IN1 (Left)
- - RIGHT_FWD = Pin 5 -> IN2 (Left middle)
- - LEFT_FWD = Pin 8 -> IN3 (Right middle)
- - LEFT_REV = Pin 7 -> IN4 (Right)
- - LEFT_PWM = Pin 11 -> ENB (Far right)
+ - RIGHT_PWM = ENA -> Pin 9 (Far left)
+ - RIGHT_REV = IN1 -> Pin 4 (Left)
+ - RIGHT_FWD = IN2 -> Pin 5 (Left middle)
+ - LEFT_FWD = IN3 -> Pin 8 (Right middle)
+ - LEFT_REV = IN4 -> Pin 7 (Right)
+ - LEFT_PWM = ENB -> Pin 11 (Far right)
+
+Sensors:                             Dark Bot        Plywood Bot
+                                    ||     Wire colours       ||
+Look at sonar from behind with wires facing down, wires ordered left to right
+Front sonar:
+ - GND -> Ground breadboard         Green           Disconnected
+                                    //Echo and Trig are connected to A1 and A0 respectively, which seems backwards to what is stated in programs
+ - Echo -> Pin A0                   Purple->Yellow  Disconnected
+ - Trig -> Pin A1                   White->Orange   Disconnected
+ - Vcc -> Power breadboard          White->Red      Disconnected
+
+Right sonar:
+ - GND -> Ground breadboard         Orange->Blue    n/a
+ - Echo -> Pin 12                   Orange->Yellow  n/a
+ - Trig -> Pin 13                   Red->Black      n/a
+ - Vcc -> Power breadboard          Brown->White    n/a
+
+Left sonar:
+ - GND -> Ground breadboard         Brown->Blue     n/a
+ - Echo -> Pin 3                    White->Purple   n/a
+ - Trig -> Pin 2                    Yellow->Green   n/a
+ - Vcc -> Power breadboard          Purple->Red     n/a
+
+IR sensor:
+ - VIN -> Power breadboard          n/a             Red
+ - GND -> Ground breadboard         n/a             Grey
+ - SDA -> SDA                       n/a             White->Orange
+ - SCL -> SCL                       n/a             Brown->Yellow
+ - INT -> n/a
+ - SHUT -> n/a
