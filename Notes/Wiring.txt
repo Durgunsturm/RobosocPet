@@ -1,3 +1,6 @@
+This documentation was last modified 02/25, so most of this information is outdated.
+Some of the plywood bot information could be useful if you want to reset the wiring.
+
 Motors:
     (Circuit board pins to motor board looking from the front)
  - RIGHT_PWM = ENA -> Pin 9 (Far left)
