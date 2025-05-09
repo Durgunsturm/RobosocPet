@@ -17,7 +17,7 @@ Directories:
 
 - Basic_Movements is an old directory with completed code made earlier in the project.
 
-- Lib & lib-pack are libaries that most programs call from, using them simplies code as essential functions are centralised
+- Lib & lib-pack are libaries that most programs call from, using them simplifies code as essential functions are centralised
 
 - Notes is obvious
 
