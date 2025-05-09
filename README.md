@@ -8,8 +8,10 @@ however they are being kept as they can help your understanding of the project.
 Programs may have incorrect pins assigned to them,
 so ensure to update the pins in the programs if you rewire the bots.
 
-Finally, the dark bot used a sonar in front and two sonars either side,
+Also, the dark bot used a sonar in front and two sonars either side,
 and the plywood bot used a single sonar in front or an IR sensor.
+
+The plywood bot has its sides removed for access, which can be rescrewed on.
 
 Directories:
 
